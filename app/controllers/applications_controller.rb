@@ -31,7 +31,14 @@ class ApplicationsController < ApplicationController
 	end
 
 	def destroy
-		
+		@application = Application.find(params[:id])
+		if @application.destroy
+			redirect_to applications_path
+		end
+	end
+
+	def show
+		@application = Application.find(params[:id])
 	end
 
 	private
