@@ -1,4 +1,4 @@
-class StudentsController < studentController
+class StudentsController < ApplicationController
 
 	def index
 		@students = Student.all
@@ -35,6 +35,10 @@ class StudentsController < studentController
 		if @student.destroy
 			redirect_to students_path
 		end
+	end
+
+	def show
+		@student = Student.find(params[:id])
 	end
 
 	private

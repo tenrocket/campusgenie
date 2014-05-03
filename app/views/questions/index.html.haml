@@ -1,1 +1,14 @@
-index.html.haml
+%h1 Questions
+
+= button_to 'Add New Question', new_question_path, method: 'get', :class => "btn btn-primary"
+%br
+
+- @questions.each do |q|
+	Question:
+	= q.question_text
+	%br
+	= button_to 'Show', q, method: 'get', :class => "btn btn-default"
+	= button_to 'Edit', edit_question_path(q), method: 'get', :class => "btn btn-warning"
+	= button_to 'Delete', q, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger"
+	%br
+	%br
