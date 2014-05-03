@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140503193121) do
+ActiveRecord::Schema.define(version: 20140503211750) do
 
   create_table "applications", force: true do |t|
     t.string   "title"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20140503193121) do
     t.string  "description"
     t.string  "password"
     t.integer "application_id"
+    t.string  "password_digest"
   end
 
 end
