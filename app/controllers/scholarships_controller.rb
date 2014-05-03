@@ -31,7 +31,14 @@ class ScholarshipsController < ApplicationController
 	end
 
 	def destroy
-		
+		@scholarship = Scholarship.find(params[:id])
+		if @scholarship.destroy
+			redirect_to scholarships_path
+		end
+	end
+
+	def show
+		@scholarship = Scholarship.find(params[:id])
 	end
 
 	private

@@ -1,1 +1,23 @@
-index.html.haml
+%h1 Available Scholarships
+
+= button_to 'Add New Scholarships', new_scholarship_path, method: 'get', :class => "btn btn-primary"
+%br
+
+- @scholarships.each do |s|
+	Category:
+	= s.title
+	%br
+	Description:
+	= s.description
+	%br
+	Granting Organization:
+	= s.organization
+	%br
+	Gift Amount:
+	= s.gift_amount
+	%br
+	= button_to 'Show', s, method: 'get', :class => "btn btn-default"
+	= button_to 'Edit', edit_scholarship_path(s), method: 'get', :class => "btn btn-warning"
+	= button_to 'Delete', s, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger"
+	%br
+	%br

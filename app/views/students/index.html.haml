@@ -1,1 +1,17 @@
-index.html.haml
+%h1 Students
+
+= button_to 'Add New Student', new_student_path, method: 'get', :class => "btn btn-primary"
+%br
+
+- @students.each do |s|
+	Name:
+	= s.name
+	%br
+	About Me:
+	= s.description
+	%br
+	= button_to 'Show', s, method: 'get', :class => "btn btn-default"
+	= button_to 'Edit', edit_student_path(s), method: 'get', :class => "btn btn-warning"
+	= button_to 'Delete', s, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger"
+	%br
+	%br

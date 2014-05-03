@@ -1,1 +1,13 @@
-_form.html.haml
+= f.label :question_text
+= f.text_field :question_text
+%br
+/ = f.label :
+/ = f.text_field :description
+/ %br
+/ = f.label :organization
+/ = f.text_field :organization
+/ %br
+/ = f.label :gift_amount
+/ = f.text_field :gift_amount
+/ %br
+= f.submit "Add"

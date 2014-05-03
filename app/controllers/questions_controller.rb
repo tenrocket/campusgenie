@@ -1,5 +1,4 @@
-class QuestionsController < questionController
-	class questionsController < questionController
+class QuestionsController < ApplicationController
 
 	def index
 		@questions = Question.all
@@ -36,6 +35,10 @@ class QuestionsController < questionController
 		if @question.destroy
 			redirect_to questions_path
 		end
+	end
+
+	def show
+		@question = Question.find(params[:id])
 	end
 
 	private
