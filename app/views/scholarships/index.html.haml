@@ -1,23 +1,23 @@
 %h1 Available Scholarships
 
-= button_to 'Add New Scholarships', new_application_path, method: 'get', :class => "btn btn-primary"
+= button_to 'Add New Scholarships', new_scholarship_path, method: 'get', :class => "btn btn-primary"
 %br
 
-- @applications.each do |a|
+- @scholarships.each do |s|
 	Category:
-	= a.title
+	= s.title
 	%br
 	Description:
-	= a.description
+	= s.description
 	%br
 	Granting Organization:
-	= a.organization
+	= s.organization
 	%br
 	Gift Amount:
-	= a.gift_amount
+	= s.gift_amount
 	%br
-	= button_to 'Show', a, method: 'get', :class => "btn btn-default"
-	= button_to 'Edit', edit_application_path(a), method: 'get', :class => "btn btn-warning"
-	= button_to 'Delete', a, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger"
+	= button_to 'Show', s, method: 'get', :class => "btn btn-default"
+	= button_to 'Edit', edit_scholarship_path(s), method: 'get', :class => "btn btn-warning"
+	= button_to 'Delete', s, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger"
 	%br
 	%br

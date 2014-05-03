@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
 
-	before_action :set_user, only: [:show, :edit, :update, :destroy]
+	before_action :set_student, only: [:show, :edit, :update, :destroy]
 	skip_filter :ensure_logged_in, only: [:new, :create]
 
 
@@ -47,6 +47,10 @@ class StudentsController < ApplicationController
 
 	private
 
+	def set_student
+		@student = Student.find(params[:id])
+	end
+	
 	def student_params
 		params.require(:student).permit!
 	end
