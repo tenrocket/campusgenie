@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+
+  root to: 'sessions#new'
+
+  get 'login' => 'sessions#new'
+  get 'logout' => 'sessions#destroy'
+
+  resources :sessions, only: [:new, :create, :destroy]
+
+  resources :questions
+
+  resources :scholarships
+
+  resources :students
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

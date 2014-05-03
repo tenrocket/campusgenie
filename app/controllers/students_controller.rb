@@ -1,16 +1,20 @@
 class StudentsController < ApplicationController
 
+	before_action :set_user, only: [:show, :edit, :update, :destroy]
+	skip_filter :ensure_logged_in, only: [:new, :create]
+
+
 	def index
 		@students = Student.all
 	end
 
 	def new
-		@new_student = Student.new
+		@student = Student.new
 	end
 
 	def create
-		@new_student = Student.new(student_params)
-		if @new_student.save
+		@student = Student.new(student_params)
+		if @student.save
 			redirect_to students_path
 		else
 			redirect_to new_student_path
