@@ -14,3 +14,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function fillAreaA (index) {
+	var txtArea = document.getElementById("areaA");
+	if (index == 1) {
+		txtArea.value = 'I OVERCAME A CHALLENGE BY DEFEATING IT.';
+	}
+	else if (index == 2) {
+		txtArea.value = "I USED TO BE AFRAID OF SOMETHING NOW I'M NOT.";
+	}
+	else if (index == 3) {
+		txtArea.value = "I WORKED HARD AND MADE MY WEAKNESS MY STRENGTH.";
+	}
+	else if (index == 0) {
+		txtArea.value = "hihiu";
+	}
+}

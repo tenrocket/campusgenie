@@ -20,6 +20,6 @@
 						%td= sch.gift_amount
 						%td= sch.created_at
 						%td= sch.updated_at
-						%td= button_to 'Apply now', edit_scholarship_path(sch), method: "get", :class => "btn btn-xs btn-warning"
+						%td= button_to 'Apply now', 'questions/new', method: "get", :class => "btn btn-xs btn-warning"
 				- else
 					No scholarships to display!

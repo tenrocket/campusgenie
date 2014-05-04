@@ -10,6 +10,14 @@ Rails.application.routes.draw do
 
   get 'pending_scholarships' => 'students#pending_scholarships'
 
+  get 'dashboard1' => 'students#dashboard1'
+
+  get 'dashboard2' => 'students#dashboard2'
+
+  get 'dashboard3' => 'students#dashboard3'
+
+  get 'dashboard4' => 'students#dashboard4'
+
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :questions
