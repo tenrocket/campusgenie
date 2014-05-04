@@ -1,14 +1,34 @@
 = form_for @new_question do |f|
+	%p What is your name?
+	= f.text_field :question_text, placeholder: 'Chris Turner'
+	%p Gender
+	= f.text_field :question_text, placeholder: "Male"
+	%p Last 4 digits of your social security number
+	= f.text_field :question_text, placeholder: "1234"
+	%h3 Essay Questions
 	%p Describe a situation in which you overcame tremendous adversity.
-	= f.text_area :question_text
+	.row
+		.col-lg-8
+			%textarea#areaA.form-control
+		.col-lg-4
+			%select.form-control{onchange: "if (this.selectedIndex) fillAreaA(selectedIndex);"}
+				%option#adversityClear 	
+				%option#adversityA Describe a time you overcame a weakness
+				%option#adversityB What was the greatest challenge you ever overcame?
+				%option#adversityC Provide an example of a time when you overcame a major hurdle
+	// = f.text_area :question_text
 	%p What do you feel most excites you about being a college student?
-	= f.text_area :question_text
+	%textarea#areaB.form-control
+	// = f.text_area :question_text
 	%p Quickly brainstorm a small scale solution for poverty. 
-	= f.text_area :question_text
+	%textarea#areaC.form-control
+	//= f.text_area :question_text
 	%p What would you say is your goal after graduating college?
-	= f.text_area :question_text
+	%textarea#areaD.form-control
+	//= f.text_area :question_text
 	%p If you had to cite your proudest accomplishment, what would it be?
-	= f.text_area :question_text
+	%textarea#areaE.form-control
+	//= f.text_area :question_text
 	%br
 	%br
 	= f.submit "Apply"

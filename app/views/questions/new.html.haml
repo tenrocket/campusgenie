@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #loginModal.modal.show{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1", :style => "\n    margin-top: 55px;\n    margin-left: 0px;\n"}
 	.modal-dialog
 		.modal-content
@@ -8,5 +9,10 @@
 				= form_for @new_question do |f|
 					.col-lg-10
 						= f.label :application_id, Scholarship.all.collect {|scholarship| [ scholarship.organization, scholarship.title, scholarship.description, scholarship.gift_amount ]}
+=======
+= form_for @new_question do |f|
+	%h1 The Koka-Kola Kompany Scholarship Application
+	.col-lg-10
+>>>>>>> sid
 
 						= render 'question_list'
