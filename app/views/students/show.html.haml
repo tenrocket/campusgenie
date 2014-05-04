@@ -24,97 +24,226 @@
   .container
     .row
       .col-lg-8.col-lg-offset-2.centered
-        %img{src: "https://media.licdn.com/media/p/7/005/046/3a8/3283a1e.jpg"}
-          %h1 #{@student.name}
-          %h3 #{@student.description}
+        .col-lg-4
+          %img{src: "https://media.licdn.com/media/p/7/005/046/3a8/3283a1e.jpg", :style => 'width:100%'}
+        .col-lg-8
+          .align-left
+            %h1 #{@student.name}
+            %h3 #{@student.description}
           %p Hello everybody. I'm #{@student.name}.  I'm really excited about college and hope to be the first student to earn a full ride using scholarFly.
-          = button_to "Delete Profile", "/students/#{@student.id}", {:action => "delete", :method => :delete}
-          =button_to "Edit Profile", "/students/#{@student.id}/edit", {:method => :get}
-          
+          .col-lg-2
+          .col-lg-5
+            =button_to "Delete Profile", "/students/#{@student.id}", {:action => "delete", :method => :delete, :class => 'btn btn-error btn-block'}
+          .col-lg-5
+            =button_to "Edit Profile", "/students/#{@student.id}/edit", {:method =>:get, :class => 'btn btn-primary btn-block'}
 .container
-  %h2 Scholarship Fields
-  .btn-group
-    %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-      Gender
-      %span.caret
-    %ul.dropdown-menu
-      %li
-        %a{href: "#"} Male
-      %li
-        %a{href: "#"} Female
-      %li
-        %a{href: "#"} Other
-  .btn-group
-    %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-      Race
-      %span.caret
-    %ul.dropdown-menu
-      %li
-        %a{href: "#"} Asian/Pacific Islander
-      %li
-        %a{href: "#"} African American
-      %li
-        %a{href: "#"} Hispanic/Latino
-      %li
-        %a{href: "#"} Native American or American Indian
-      %li
-        %a{href: "#"} White
-      %li
-        %a{href: "#"} Other
+  .row
+  .col-lg-2
+  .col-lg-8
+    %br/
+    %br/
+    .row
+      .col-lg-3
+        %h4.headMed Gender
+      .col-lg-9
+        .btn-group{"data-toggle" => "buttons"}
+          %label#btnMale.btn.btn-default{onclick: "activateMale()"}
+            %input#option1{name: "options", type: "radio"}/
+            Male
+          %label#btnFemale.btn.btn-default.active{onclick: "activateFemale()"}
+            %input#option2{name: "options", type: "radio"}/
+            Female
+          %label#btnOther.btn.btn-default{"data-toggle" => "button", onclick: "activateOther()"}
+            %input#option3{name: "options", type: "radio"}/
+            Other / Prefer not to answer
+    %br/
+    .row
+      .col-lg-3
+        %h4.headMed Race
+      .col-lg-9
+        %select.form-control{multiple: "multiple", size: "6"}
+          %option American Indian or Alaska Native
+          %option Asian
+          %option Black or African American
+          %option Native Hawaiian or Pacific Islander
+          %option White (Non-Hispanic)
+          %option White Hispanic
+    %br/
+    .row
+      .col-lg-3
+        %h4.headMed Birth Date
+      .col-lg-3
+        %select.form-control.inline{name: "birthYear"}
+          %option 2014
+          %option 2013
+          %option 2012
+          %option 2011
+          %option 2010
+          %option 2009
+          %option 2008
+          %option 2007
+          %option 2006
+          %option 2005
+          %option 2004
+          %option 2003
+          %option 2002
+          %option 2001
+          %option 2000
+          %option 1999
+          %option 1998
+          %option 1997
+          %option 1996
+          %option 1995
+          %option 1994
+          %option 1993
+          %option 1992
+          %option 1991
+          %option 1990
+          %option 1989
+          %option 1988
+          %option 1987
+          %option 1986
+          %option 1985
+          %option 1984
+          %option 1983
+          %option 1982
+          %option 1981
+          %option 1980
+          %option 1979
+          %option 1978
+          %option 1977
+          %option 1976
+          %option 1975
+          %option 1974
+          %option 1973
+          %option 1972
+          %option 1971
+          %option 1970
+          %option 1969
+          %option 1968
+          %option 1967
+          %option 1966
+          %option 1965
+          %option 1964
+          %option 1963
+          %option 1962
+          %option 1961
+          %option 1960
+          %option 1959
+          %option 1958
+          %option 1957
+          %option 1956
+          %option 1955
+          %option 1954
+          %option 1953
+          %option 1952
+          %option 1951
+          %option 1950
+          %option 1949
+          %option 1948
+          %option 1947
+          %option 1946
+          %option 1945
+          %option 1944
+          %option 1943
+          %option 1942
+          %option 1941
+          %option 1930
+          %option 1939
+          %option 1938
+          %option 1937
+          %option 1936
+          %option 1935
+          %option 1934
+          %option 1933
+          %option 1932
+          %option 1931
+          %option 1930
+          %option 1929
+          %option 1928
+          %option 1927
+          %option 1926
+          %option 1925
+          %option 1924
+          %option 1923
+          %option 1922
+          %option 1921
+          %option 1920
+          %option 1919
+          %option 1918
+          %option 1917
+          %option 1916
+          %option 1915
+          %option 1914
+      .col-lg-4
+        %select.form-control{name: "birthMonth"}
+          %option January
+          %option February
+          %option March
+          %option April
+          %option May
+          %option June
+          %option July
+          %option August
+          %option September
+          %option October
+          %option November
+          %option December
+      .col-lg-2
+        %select.form-control{name: "birthDay"}
+          %option 1
+          %option 2
+          %option 3
+          %option 4
+          %option 5
+          %option 6
+          %option 7
+          %option 8
+          %option 9
+          %option 10
+          %option 11
+          %option 12
+          %option 13
+          %option 14
+          %option 15
+          %option 16
+          %option 17
+          %option 18
+          %option 19
+          %option 20
+          %option 21
+          %option 22
+          %option 23
+          %option 24
+          %option 25
+          %option 26
+          %option 27
+          %option 28
+          %option 29
+          %option 30
+          %option 31
+    %br/
+    .row
+      .col-lg-3
+        %h4.headMed Education
+      .col-lg-2
+        %input.form-control{placeholder: "GPA", type: "text"}/
+      .col-lg-7
+        %input.form-control{placeholder: "Major", type: "text"}/
+    %br/
+    .row
+      .col-lg-3
+        %h4.headMed Annual Income
+      .col-lg-9
+        .input-group
+          %span.input-group-addon $
+          %input.form-control{type: "text"}/
+          %span.input-group-addon .00
+    %br/
+    %br/
+    .row
+      .col-lg-8
+      .col-lg-4
+        = link_to 'Save Changes', '/dashboard', method: 'get', :class => "btn btn-primary btn-lg btn-block"
 
-  .btn-group
-    %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-      Age
-      %span.caret
-    %ul.dropdown-menu
-      %li
-        %a{href: "#"} < 18
-      %li
-        %a{href: "#"} 18-24
-      %li
-        %a{href: "#"} 25-34
-      %li
-        %a{href: "#"} 34+
-
-  .btn-group
-    %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-      GPA
-      %span.caret
-    %ul.dropdown-menu
-      %li
-        %a{href: "#"} < 2.5
-      %li
-        %a{href: "#"} 2.5-2.9
-      %li
-        %a{href: "#"} 3.0-3.4
-      %li
-        %a{href: "#"} 3.5-3.9
-      %li
-        %a{href: "#"} 4.0+
-
-  .btn-group
-    %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-      Major
-      %span.caret
-    %ul.dropdown-menu
-      %li
-        %a{href: "#"} Biology
-      %li
-        %a{href: "#"} Business
-      %li
-        %a{href: "#"} Education
-      %li
-        %a{href: "#"} Engineering
-      %li
-        %a{href: "#"} Health Sciences   
-      %li
-        %a{href: "#"} Psychology
-      %li
-        %a{href: "#"} Physical Sciences
-      %li
-        %a{href: "#"} Social Sciences/History 
-
-%br
-%h3 See Your Personalized Scholarship Dashboard
-%br
-= link_to 'GO', '/dashboard', method: 'get', :class => "btn btn-default"
+    %br/
