@@ -1,8 +1,11 @@
 = form_for @new_question do |f|
 	%p What is your name?
-	= f.text_field :question_text, placeholder: 'Sid Tantia'
+	= f.text_field :question_text, placeholder: 'Chris Turner'
 	%p Gender
-	= f.text_field :question_text, placeholder: 'Male'
+	= f.text_field :question_text, placeholder: "Male"
+	%p Last 4 digits of your social security number
+	= f.text_field :question_text, placeholder: "1234"
+	%h3 Essay Questions
 	%p Describe a situation in which you overcame tremendous adversity.
 	.row
 		.col-lg-8
