@@ -1,0 +1,14 @@
+= form_for @new_question do |f|
+	%p Describe a situation in which you overcame tremendous adversity.
+	= f.text_area :question_text
+	%p What do you feel most excites you about being a college student?
+	= f.text_area :question_text
+	%p Quickly brainstorm a small scale solution for poverty. 
+	= f.text_area :question_text
+	%p What would you say is your goal after graduating college?
+	= f.text_area :question_text
+	%p If you had to cite your proudest accomplishment, what would it be?
+	= f.text_area :question_text
+	%br
+	%br
+	= f.submit "Apply"

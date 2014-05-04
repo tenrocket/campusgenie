@@ -1,2 +1,6 @@
 = form_for @new_question do |f|
-	= render "form", f: f
+	%h1 Scholarship Application
+	.col-lg-10
+		= f.label :application_id, Scholarship.all.collect {|scholarship| [ scholarship.organization, scholarship.title, scholarship.description, scholarship.gift_amount ]}
+
+		= render 'question_list'

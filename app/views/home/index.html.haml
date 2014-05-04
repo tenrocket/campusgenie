@@ -1,0 +1,90 @@
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %meta{content: "SHIELD - Free Bootstrap 3 Theme", name: "description"}/
+    %meta{content: "Carlos Alvarez - Alvarez.is - blacktie.co", name: "author"}/
+    %link{href: "http://www.blacktie.co/demo/shield/assets/ico/favicon.png", rel: "shortcut icon"}/
+    %title SHIELD - Free Bootstrap 3 Theme
+    / Bootstrap core CSS
+    %link{href: "http://www.blacktie.co/demo/shield/assets/css/bootstrap.css", rel: "stylesheet"}/
+    / Custom styles for this template
+    %link{href: "http://www.blacktie.co/demo/shield/assets/css/main.css", rel: "stylesheet"}/
+    %link{href: "http://www.blacktie.co/demo/shield/assets/css/icomoon.css", rel: "stylesheet"}/
+    %link{href: "http://www.blacktie.co/demo/shield/assets/css/animate-custom.css", rel: "stylesheet"}/
+    %link{href: "http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic", rel: "stylesheet", type: "text/css"}/
+    %link{href: "http://fonts.googleapis.com/css?family=Raleway:400,300,700", rel: "stylesheet", type: "text/css"}/
+    %script{src: "http://www.blacktie.co/demo/shield/assets/js/jquery.min.js"}
+    %script{src: "http://www.blacktie.co/demo/shield/assets/js/modernizr.custom.js", type: "text/javascript"}
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+  %body{"data-offset" => "0", "data-spy" => "scroll", "data-target" => "#navbar-main"}
+    #navbar-main
+      / Fixed navbar
+      .navbar.navbar-inverse.navbar-fixed-top
+        .container
+          .navbar-header
+            %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+              %span.icon.icon-shield{style: "font-size:30px; color:#3498db;"}
+            %a.navbar-brand.hidden-xs.hidden-sm{href: "#home"}
+              %span.icon.icon-shield{style: "font-size:18px; color:#3498db;"}
+          .navbar-collapse.collapse
+            %ul.nav.navbar-nav
+              %li
+                %a.smoothScroll{href: "/login"} Login
+              %li
+                %a.smoothScroll{href: "/students/1"} Profile
+              %li
+                %a.smoothScroll{href: "/scholarships"} Scholarships
+          / /.nav-collapse
+    / ==== HEADERWRAP ====
+    #headerwrap{name: "scholarFly"}
+      %header.clearfix
+        %h1
+          %span.icon.icon-shield
+        %p ScholarFly is The Easiest Way to Earn Money for College.
+    / /headerwrap
+    / ==== GREYWRAP ====
+    #greywrap
+      .row
+        .col-lg-4.callout
+          %span.icon.icon-stack
+          %h2 Fastest
+          %p scholarFly is the fastest way to apply for scholarships online.  Once you apply for your first scholarship, scholarFly saves your answers and applies them automatically to future applications.  
+        / col-lg-4
+        .col-lg-4.callout
+          %span.icon.icon-eye
+          %h2 Largest
+          %p scholarfly is the world's largest database of scholarships.  Along with the well-known opportunies, we curate 'hidden gems' that may fly under the radar.
+        / col-lg-4
+        .col-lg-4.callout
+          %span.icon.icon-heart
+          %h2 Most Effective
+          %p Faster applications means MORE applications.  The more you apply, the better your chances of landing an awesome scholarship.  It's science.
+        / col-lg-4
+      / row
+    / greywrap
+    / ==== ABOUT ====
+    #about.container{name: "about"}
+      .row.white
+        %br/
+        %h1.centered A LITTLE ABOUT SCHOLARFLY
+        %hr/
+        .col-lg-6
+          %p We believe that everyone deserves a shot at a quality education.  With the cost of tuition soaring nationwide, students more than ever need an effective way to save money on college.  ScholarFly exists to connect students in need with affordable opportunies to learn at the highest level.
+        / col-lg-6
+        .col-lg-6
+          %p Over the next five years, we will become the global leader in the $5 billion scholarship market.  Our core technology will be licensed by universities to improve their own application platform, and by 2020 we will have connected more than 1 million students with $100 million in scholarship funding.
+        / col-lg-6
+      / row
+    / container
+    / ==== SECTION DIVIDER1
+    %section.section-divider.textdivider.divider1
+      .container
+        %h1 APPLY FOR ONE, & DONE
+        %hr
+        %p scholarFly is changing lives for the better.  Give us a shout or follow us on Twitter @ScholarFly.
+      / container
+    / section

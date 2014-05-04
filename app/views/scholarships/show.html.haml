@@ -4,3 +4,6 @@
 %p= @scholarship.description
 %p= @scholarship.organization
 %p= @scholarship.gift_amount
+
+= link_to 'Apply', '/questions/new', method: 'get', :class => "btn btn-default"
+
