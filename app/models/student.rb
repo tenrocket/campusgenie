@@ -4,6 +4,7 @@ class Student < ActiveRecord::Base
   validates_presence_of :email
   validates_uniqueness_of :email
 
-  has_and_belongs_to_many :scholarships
+  has_many :student_scholarships
+  has_many :scholarships, through: :student_scholarships
   has_many :questions
 end

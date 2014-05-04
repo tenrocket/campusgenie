@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
 
+  get 'dashboard' => 'students#dashboard'
+
+  get 'pending_scholarships' => 'students#pending_scholarships'
+
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :questions
@@ -20,10 +24,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
-  resources :students
-  resources :applications
-  resources :questions
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

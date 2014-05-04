@@ -1,0 +1,25 @@
+.form-horizontal
+  .fieldset
+    .form-group
+      .col-lg-6
+        .form-group
+          = f.label :title, :class => "col-lg-2 control-label"
+          .col-lg-10
+            = f.text_field :title, :class => "form-control", type: "name"
+        .form-group
+          = f.label :description, :class => "col-lg-2 control-label"
+          .col-lg-10
+            = f.text_field :description, :class => "form-control"
+        .form-group
+          = f.label :organization, :class => "col-lg-2 control-label"
+          .col-lg-10
+            = f.text_field :organization, :class => "form-control"
+        .form-group
+          = f.label :award_amount, :class => "col-lg-2 control-label"
+          .col-lg-10
+            = f.text_field :gift_amount, :class => "form-control"
+        .actions
+          .form-group
+            .col-lg-10.col-lg-offset-2
+              = f.submit 'Save', :class => "btn btn-primary"
+              = link_to 'Cancel', students_path, :class => "btn btn-default"
