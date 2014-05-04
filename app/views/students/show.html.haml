@@ -1,9 +1,36 @@
-%h1 Student Profile
-%br
-%h3= @student.name
-%p= @student.description
-%p= @student.email
+/ %h1 Student Profile
+/ %br
+/ %h3= @student.name
+/ %p= @student.description
+/ %p= @student.email
 
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    %link{href: "http://www.blacktie.co/docs-assets/ico/favicon.png", rel: "shortcut icon"}/
+    %title scholarFly
+    / Bootstrap core CSS
+    %link{href: "http://www.blacktie.co/demo/stanley/assets/css/bootstrap.css", rel: "stylesheet"}/
+    / Custom styles for this template
+    %link{href: "http://www.blacktie.co/demo/stanley/assets/css/main.css", rel: "stylesheet"}/
+    %script{src: "https://code.jquery.com/jquery-1.10.2.min.js"}
+    %script{src: "assets/js/hover.zoom.js"}
+    %script{src: "assets/js/hover.zoom.conf.js"}
+#ww
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2.centered
+        %img{src: "https://media.licdn.com/media/p/7/005/046/3a8/3283a1e.jpg"}
+          %h1 #{@student.name}
+          %h3 #{@student.description}
+          %p Hello everybody. I'm #{@student.name}.  I'm really excited about college and hope to be the first student to earn a full ride using scholarFly.
+          = button_to "Delete Profile", "/students/#{@student.id}", {:action => "delete", :method => :delete}
+          =button_to "Edit Profile", "/students/#{@student.id}/edit", {:method => :get}
+          
 .container
   %h2 Scholarship Fields
   .btn-group
@@ -90,5 +117,4 @@
 %br
 %h3 See Your Personalized Scholarship Dashboard
 %br
-= link_to 'GO', '/scholarships', method: 'get', :class => "btn btn-default" 
-
+= link_to 'GO', '/dashboard', method: 'get', :class => "btn btn-default"

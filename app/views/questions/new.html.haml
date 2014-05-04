@@ -1,6 +1,12 @@
-= form_for @new_question do |f|
-	%h1 Scholarship Application
-	.col-lg-10
-		= f.label :application_id, Scholarship.all.collect {|scholarship| [ scholarship.organization, scholarship.title, scholarship.description, scholarship.gift_amount ]}
+#loginModal.modal.show{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1", :style => "\n    margin-top: 55px;\n    margin-left: 0px;\n"}
+	.modal-dialog
+		.modal-content
+			.modal-header
+				%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+				%h1.text-center ScholarFly Application
+			.modal-body
+				= form_for @new_question do |f|
+					.col-lg-10
+						= f.label :application_id, Scholarship.all.collect {|scholarship| [ scholarship.organization, scholarship.title, scholarship.description, scholarship.gift_amount ]}
 
-		= render 'question_list'
+						= render 'question_list'
