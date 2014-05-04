@@ -1,13 +1,11 @@
-= f.label :question_text
-= f.text_field :question_text
+%h1 Question Details
 %br
-/ = f.label :
-/ = f.text_field :description
-/ %br
-/ = f.label :organization
-/ = f.text_field :organization
-/ %br
-/ = f.label :gift_amount
-/ = f.text_field :gift_amount
-/ %br
-= f.submit "Add"
+%h3= @question.question_text
+
+= form_for @question do |f|
+	.form-group
+		= f.label :scholarship
+	.col-lg-10
+		= f.select :application_id, Scholarship.all.collect {|scholarship| [ scholarship.title, scholarship.id ]}
+	%br
+	= f.submit "Apply"

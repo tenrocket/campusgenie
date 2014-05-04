@@ -3,3 +3,92 @@
 %h3= @student.name
 %p= @student.description
 %p= @student.email
+
+.container
+  %h2 Scholarship Fields
+  .btn-group
+    %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+      Gender
+      %span.caret
+    %ul.dropdown-menu
+      %li
+        %a{href: "#"} Male
+      %li
+        %a{href: "#"} Female
+      %li
+        %a{href: "#"} Other
+  .btn-group
+    %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+      Race
+      %span.caret
+    %ul.dropdown-menu
+      %li
+        %a{href: "#"} Asian/Pacific Islander
+      %li
+        %a{href: "#"} African American
+      %li
+        %a{href: "#"} Hispanic/Latino
+      %li
+        %a{href: "#"} Native American or American Indian
+      %li
+        %a{href: "#"} White
+      %li
+        %a{href: "#"} Other
+
+  .btn-group
+    %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+      Age
+      %span.caret
+    %ul.dropdown-menu
+      %li
+        %a{href: "#"} < 18
+      %li
+        %a{href: "#"} 18-24
+      %li
+        %a{href: "#"} 25-34
+      %li
+        %a{href: "#"} 34+
+
+  .btn-group
+    %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+      GPA
+      %span.caret
+    %ul.dropdown-menu
+      %li
+        %a{href: "#"} < 2.5
+      %li
+        %a{href: "#"} 2.5-2.9
+      %li
+        %a{href: "#"} 3.0-3.4
+      %li
+        %a{href: "#"} 3.5-3.9
+      %li
+        %a{href: "#"} 4.0+
+
+  .btn-group
+    %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+      Major
+      %span.caret
+    %ul.dropdown-menu
+      %li
+        %a{href: "#"} Biology
+      %li
+        %a{href: "#"} Business
+      %li
+        %a{href: "#"} Education
+      %li
+        %a{href: "#"} Engineering
+      %li
+        %a{href: "#"} Health Sciences   
+      %li
+        %a{href: "#"} Psychology
+      %li
+        %a{href: "#"} Physical Sciences
+      %li
+        %a{href: "#"} Social Sciences/History 
+
+%br
+%h3 See Your Personalized Scholarship Dashboard
+%br
+= link_to 'GO', '/scholarships', method: 'get', :class => "btn btn-default" 
+

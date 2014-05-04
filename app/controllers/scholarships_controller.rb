@@ -24,7 +24,7 @@ class ScholarshipsController < ApplicationController
 	def update
 		@scholarship = Scholarship.find(params[:id])
 		if @scholarship.update_attributes(scholarship_params)
-			redirect_to scholarships_params
+			redirect_to scholarships_path
 		else
 			redirect_to edit_scholarship_path
 		end

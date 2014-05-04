@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  get 'home/index'
 
-  root to: 'sessions#new'
+  # root to: 'sessions#new'
 
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :students
 
-
+  root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
