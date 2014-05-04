@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 		student = Student.find_by_email(params[:email]).try(:authenticate, params[:password])
 		if student
 			session[:student_id] = student.id
-			redirect_to students_path, notice: "Sweet! You are logged in."
+			redirect_to dashboard_path, notice: "Sweet! You are logged in."
 		else
 			flash.now.alert = "Bummer.  Your login attempt failed."
 			render :new

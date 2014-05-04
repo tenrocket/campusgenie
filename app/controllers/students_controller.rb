@@ -15,7 +15,7 @@ class StudentsController < ApplicationController
 	def create
 		@student = Student.new(student_params)
 		if @student.save
-			redirect_to students_path
+			render :dashboard
 		else
 			redirect_to new_student_path
 		end

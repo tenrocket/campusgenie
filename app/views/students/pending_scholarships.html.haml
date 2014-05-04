@@ -1,0 +1,25 @@
+.container
+	%legend Pending Scholarships
+
+	%table.table.table-striped.table-hover
+		.thead
+			%tr
+				%th Title
+				%th Description
+				%th Sponsoring company
+				%th Amount
+				%th Started at
+				%th Modified at
+		.tbody
+			- @current_student.scholarships.each do |sch|
+				- if sch.applied == 'Partial'
+					%tr
+						%td= sch.title
+						%td= sch.description
+						%td= sch.organization
+						%td= sch.gift_amount
+						%td= sch.created_at
+						%td= sch.updated_at
+						%td= button_to 'Apply now', edit_scholarship_path(sch), method: "get", :class => "btn btn-xs btn-warning"
+				- else
+					No scholarships to display!

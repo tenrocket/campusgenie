@@ -1,6 +1,7 @@
 class Scholarship < ActiveRecord::Base
 
-  has_and_belongs_to_many :students
+  has_many :student_scholarships
+  has_many :students, :through => :student_scholarships
   has_many :questions
 
 end

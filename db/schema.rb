@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140503223055) do
+ActiveRecord::Schema.define(version: 20140504151013) do
 
   create_table "questions", force: true do |t|
     t.string  "question_text"
@@ -24,11 +24,15 @@ ActiveRecord::Schema.define(version: 20140503223055) do
     t.string   "title"
     t.string   "description"
     t.string   "organization"
-    t.boolean  "applied"
-    t.integer  "student_id"
     t.string   "gift_amount"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "applied"
+  end
+
+  create_table "student_scholarships", force: true do |t|
+    t.integer "student_id"
+    t.integer "scholarship_id"
   end
 
   create_table "students", force: true do |t|
