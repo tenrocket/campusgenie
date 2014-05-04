@@ -1,0 +1,76 @@
+.container
+
+  .col-md-4
+    .budget-box-heading Scholarships pending (click to see): 
+    = link_to "#{@current_student.scholarships.count}", 'pending_scholarships'
+  .col-md-4
+    .budget-box-heading Money Earned So Far:
+    $15,674
+  .col-md-4
+    .budget-box-heading Targeted Scholarships found for you (click to see):
+    = link_to '15', 'qualified_scholarships'
+  .col-md-6
+
+.container
+  %legend Find more scholarships with upcoming deadlines:
+
+  %table.table.table-hover
+    .thead
+      %tr
+        %th Pick Yes or No and click Submit
+    .tbody
+      %tr
+        %td Are you left-handed?
+        %td= button_to 'Yes', 'dashboard2', :method => :get, :class => "btn btn-xs btn-success"
+        %td= button_to 'No', 'dashboard2', :method => :get, :class => "btn btn-xs btn-danger"
+        %td= button_to 'Don\'t know', 'dashboard2', :method => :get
+      %tr
+        %td Have you ever done community service in another country?
+        %td= button_to 'Yes', 'dashboard2', :method => :get, :class => "btn btn-xs btn-success"
+        %td= button_to 'No', 'dashboard2', :method => :get, :class => "btn btn-xs btn-danger"
+        %td= button_to 'Don\'t know', 'dashboard2', :method => :get
+      %tr
+        %td Do you have any Canadian ancestry
+        %td= button_to 'Yes', 'dashboard2', :method => :get, :class => "btn btn-xs btn-success"
+        %td= button_to 'No', 'dashboard2', :method => :get, :class => "btn btn-xs btn-danger"
+        %td= button_to 'Don\'t know', 'dashboard2', :method => :get
+      %tr
+        %td Do you know more than one language?
+        %td= button_to 'Yes', 'dashboard2', :method => :get, :class => "btn btn-xs btn-success"
+        %td= button_to 'No', 'dashboard2', :method => :get, :class => "btn btn-xs btn-danger"
+        %td= button_to 'Don\'t know', 'dashboard2', :method => :get
+      %tr
+        %td Have you ever gotten a tattoo?
+        %td= button_to 'Yes', 'dashboard2', :method => :get, :class => "btn btn-xs btn-success"
+        %td= button_to 'No', 'dashboard2', :method => :get, :class => "btn btn-xs btn-danger"
+        %td= button_to 'Don\'t know', 'dashboard2', :method => :get
+      %tr
+        %td Are you a Pacific Islander?
+        %td= button_to 'Yes', 'dashboard2', :method => :get, :class => "btn btn-xs btn-success"
+        %td= button_to 'No', 'dashboard2', :method => :get, :class => "btn btn-xs btn-danger"
+        %td= button_to 'Don\'t know', 'dashboard2', :method => :get
+      %tr
+        %td Do your parents make below $50,000 year/combined?
+        %td= button_to 'Yes', 'dashboard2', :method => :get, :class => "btn btn-xs btn-success"
+        %td= button_to 'No', 'dashboard2', :method => :get, :class => "btn btn-xs btn-danger"
+        %td= button_to 'Don\'t know', 'dashboard2', :method => :get
+      %tr
+        %td Are you African-American?
+        %td= button_to 'Yes', 'dashboard2', :method => :get, :class => "btn btn-xs btn-success"
+        %td= button_to 'No', 'dashboard2', :method => :get, :class => "btn btn-xs btn-danger"
+        %td= button_to 'Don\'t know', 'dashboard2', :method => :get
+      %tr
+        %td Has anyone in your immediate family ever gone to college?
+        %td= button_to 'Yes', 'dashboard2', :method => :get, :class => "btn btn-xs btn-success"
+        %td= button_to 'No', 'dashboard2', :method => :get, :class => "btn btn-xs btn-danger"
+        %td= button_to 'Don\'t know', 'dashboard2', :method => :get
+      %tr
+        %td Do you love grapes?
+        %td= button_to 'Yes', 'dashboard2', :method => :get, :class => "btn btn-xs btn-success"
+        %td= button_to 'No', 'dashboard2', :method => :get, :class => "btn btn-xs btn-danger"
+        %td= button_to 'Don\'t know', 'dashboard2', :method => :get
+
+
+
+
+
